@@ -9,43 +9,68 @@
 <body>
   <header>
     <div class="container">
-      <h1>Formulário de Cadastro</h1>
+      <div class="logo_register">
+        <a href="index.html"><img src="" alt="logo alado"></a> 
+      </div>
+      <div class="title_register">
+        <h1>Formulário de Cadastro</h1>
+      </div>
     </div>
   </header>
   <section>
     <div class="container">
       <form class="formulario" action="" method="POST">
-        <label for="name">Nome:
-        <input type="text" id="name" name="name" required>
-        </label>
+        <div class="personal_data">
+          <div class="data_group">
+            <label>Dados Pessoais:</label>
+            <label for="name">Nome:
+              <input type="text" id="name" name="name" required>
+            </label>
 
-        <label for="email">Email:
-        <input type="email" id="email" name="email" required>
-        </label>
+            <label for="email">Email:
+              <input type="email" id="email" name="email" required>
+            </label>
 
+            <label for="dob">Data Nascimento:
+              <input type="date" id="dob" name="dob" required>
+            </label>
+
+            <label for="telefone">Telefone:
+              <input type="tel" id="telefone" name="telefone" required>
+            </label>
+          </div>
+          <div class="radio_group">
+            <label for="gender">Gênero:</label>
+            <label for="gender">Masculino
+              <input type="radio" id="genderMasculino" name="gender" value="masculino">
+            </label>
+            <label for="gender">Feminino
+              <input type="radio" id="genderFeminino" name="gender" value="feminino">
+            </label>
+            <label for="gender">Outros
+              <input type="radio" id="genderOutros" name="gender" value="outros">
+            </label>
+            <label for="gender">Prefiro não dizer
+              <input type="radio" id="genderNull" name="gender" value="nula">
+            </label>
+          </div>
+        </div>
         <label for="endereco">Endereço:
-        <input type="text" id="endereco" name="endereco" required>
+          <input type="text" id="endereco" name="endereco" required>
         </label>
 
         <label for="cep">CEP:
-        <input type="text" id="cep" name="cep" required>
+          <input type="text" id="cep" name="cep" required>
         </label>
 
         <label for="cidade">Cidade:
-        <input type="text" id="cidade" name="cidade" required>
+          <input type="text" id="cidade" name="cidade" required>
         </label>
 
         <label for="estado">Estado:
-        <input type="text" id="estado" name="estado" required>
+          <input type="text" id="estado" name="estado" required>
         </label>
-
-        <label for="dob">Data de Nascimento:
-        <input type="date" id="dob" name="dob" required>
-        </label>
-
-        <label for="telefone">Telefone:
-        <input type="tel" id="telefone" name="telefone" required>
-        </label>
+       
         <div class="segundo_bloco">
           <div class="bloco_senha">
             <label for="password">Senha:

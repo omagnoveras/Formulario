@@ -5,71 +5,27 @@ body{
 
 header{
     display: flex;
-    background-color: #747474;
-    padding: 20px 0;
-    height: 100px;
     justify-content: center;
+    background-color: #8a8f8d;
+    margin-bottom: 10px;
+    color: #ffffff
 }
 
 .container{
     display: flex;
+    justify-content: center;
     width: 840px;
-    justify-content: center;
 }
 
-.formulario{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    background-color: #747474;
-    margin-top: 10px;
-    border: 2px solid #ccc;
+ .logo_register{ 
+    background-color: #6341ff;
+ }
+
+ .title_register{
+        background-color: #26484b;
+
+ }
+
+section {
+    background-color: aqua;
 }
-
-.formulario label{
-    flex: 1;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.container h1{
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-section{
-    display: flex;
-    justify-content: center;
-}
-
-
-.segundo_bloco{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.segundo_bloco button{
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-}
-
-.bloco_senha{
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-}
-
-#password{
-    margin-left: 87px;
-}
-
-.bloco_termos{
-    margin: 10px 0;
-}
-
-

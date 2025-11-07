@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +7,96 @@
   <title>Formulário de Cadastro</title>
 </head>
 <body>
-  <header>
+
+  <!-- ===============================================================
+        BLOCO 1: HEADER (Cabeçalho com logo e título)
+  -->
+  <header class="centraliza">
     <div class="container">
+      <!-- Logo à esquerda-->
       <div class="logo_register">
-        <a href="index.html"><img src="" alt="logo alado"></a> 
+        <a href="index.html">
+          <img src="" alt="logo alado">
+        </a> 
       </div>
+
+      <!-- Título a direita -->
       <div class="title_register">
         <h1>Formulário de Cadastro</h1>
       </div>
     </div>
   </header>
-  <section>
+
+  <!-- ================================================================
+      BLOCO 2: SECTION (Área principal do formulário) 
+      =================================================================-->
+  <section class=" section_form centraliza">
     <div class="container">
-      <form class="formulario" action="" method="POST">
-        <div class="personal_data">
+      <form action="" method="POST">
+       
           <div class="data_group">
-            <label>Dados Pessoais:</label>
-            <label for="name">Nome:
-              <input type="text" id="name" name="name" required>
-            </label>
-
-            <label for="email">Email:
+            <h3>Dados Pessoais:</h3>
+            <!-- Campo Nome -->
+             <div class="form_campo">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name" placeholder="Ex: Chupeta Silva" required>
+             </div>
+            
+             <!-- Campo Email -->
+             <div class="form_campo">
+              <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
-            </label>
-
-            <label for="dob">Data Nascimento:
+             </div>
+            
+             <!-- Campo Data de Nascimento -->
+            <div class="form_campo">
+              <label for="dob">Data Nascimento:</label>
               <input type="date" id="dob" name="dob" required>
-            </label>
+            </div>
 
-            <label for="telefone">Telefone:
+            <!-- Campo de Telefone -->
+             <div class="form_campo">
+              <label for="telefone">Telefone:</label>
               <input type="tel" id="telefone" name="telefone" required>
-            </label>
+             </div>
+             
+            <!-- Campo de Gênero -->
+            <div class="form_campo">
+              <!-- Título do grupo de gênero -->
+               <div class="radio_titulo">
+                <label>Gênero</label>
+               </div>
+
+               <!-- Container dos radio buttons -->
+              <div class="radio_group">
+
+                <!-- Opção 1: Masculino -->
+                 <div class="radio_opcao">
+                  <input type="radio" id="genderMasculino" name="gender" value="masculino" required>
+                  <label for="genderMasculino">Masculino</label>
+                </div>
+                
+                <!-- Opção 2: Feminino -->
+                <div class="radio_opcao">
+                  <input type="radio" id="genderFeminino" name="gender" value="feminino">
+                  <label for="genderFeminino">Feminino</label>
+                </div>
+                
+                <!-- Opção 3: Outros -->
+                <div class="radio_opcao">
+                  <input type="radio" id="genderOutros" name="gender" value="outros">
+                  <label for="genderOutros">Outros</label>
+                </div>
+
+                <!-- Opção 4: Prefiro não dizer-->
+                 <div class="radio_opcao">
+                  <input type="radio" id="genderNull" name="gender" value="nula">
+                  <label for="genderNull">Prefiro não dizer</label>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radio_group">
-            <label for="gender">Gênero:</label>
-            <label for="gender">Masculino
-              <input type="radio" id="genderMasculino" name="gender" value="masculino">
-            </label>
-            <label for="gender">Feminino
-              <input type="radio" id="genderFeminino" name="gender" value="feminino">
-            </label>
-            <label for="gender">Outros
-              <input type="radio" id="genderOutros" name="gender" value="outros">
-            </label>
-            <label for="gender">Prefiro não dizer
-              <input type="radio" id="genderNull" name="gender" value="nula">
-            </label>
-          </div>
-        </div>
+          
         <label for="endereco">Endereço:
           <input type="text" id="endereco" name="endereco" required>
         </label>

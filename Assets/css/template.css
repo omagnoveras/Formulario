@@ -20,11 +20,17 @@ header{
 .formulario{
     display: flex;
     flex-flow: row wrap;
-
+    justify-content: center;
+    background-color: #747474;
+    margin-top: 10px;
+    border: 2px solid #ccc;
 }
 
 .formulario label{
+    flex: 1;
     padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .container h1{
@@ -36,3 +42,34 @@ section{
     display: flex;
     justify-content: center;
 }
+
+
+.segundo_bloco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.segundo_bloco button{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.bloco_senha{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+#password{
+    margin-left: 87px;
+}
+
+.bloco_termos{
+    margin: 10px 0;
+}
+
+

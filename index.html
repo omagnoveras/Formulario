@@ -177,30 +177,92 @@
                 </select>
              </div>
         </div>
-       
-        <div class="segundo_bloco">
-          <div class="bloco_senha">
-            <label for="password">Senha:
-            <input type="password" id="password" name="password" required>
-            </label>
+        <!-- Container do campo de segurança -->
+         <div class="security_group">
+          <h3>Segurança:</h3>
 
-            <label for="confirm_password">Confirmar Senha:
-            <input type="password" id="confirm_password" name="confirm_password" required>
-            </label>
+          <div class="senha_wrapper">
+            <!-- Campo senha -->
+            <div class="form_campo campo_pequeno_senha">
+              <label for="password">Senha:</label>
+              <div class="input_com_icone">
+                <input type="password" id="password" name="password" placeholder="Mínimo 7 caracteres" minlength="7" required>
+                <button type="button" class="toggle_senha" onclick="toggleSenha('password', this)">
+                  👁️
+                </button>
+              </div>
+            </div>
+
+            <!-- Campo confirma senha -->
+            <div class="form_campo campo_pequeno_senha">
+              <label for="confirm_password">Confirmar Senha:</label>
+              <div class="input_com_icone">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Digite a senha novamente" minlength="7" required>
+                <button type="button" class="toggle_senha" onclick="toggleSenha('confirm_password', this)">
+                  👁️
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="bloco_termos">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">
-              Aceito os <a href="/Assets/paginas/termos.html">termos e condições</a>
-            </label>
-            
+
+           <!-- Campo critérios -->
+          <div class="criterios">
+            <p class="criterios_titulo">Critérios de aceitação:</p>
+            <ul class="criterios_lista">
+              <li>Mínimo 7 caracteres</li>
+              <li>1 letra maiúscula (A-Z)</li>
+              <li>1 caractere especial (@, #, $, %, etc.) </li>
+            </ul>
           </div>
-          <div class="botao_cadastro">
-            <button type="submit">cadastrar</button>
+         </div>
+
+                  <!-- BLOCO FINAL: Termos e Botão -->
+          <div class="final_group">
+
+            <!-- Checkbox de Termos -->
+            <div class="checkbox_container">
+              <div class="checkbox_wrapper">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">
+                  <span class="checkmark"></span>
+                  <span class="texto_termos">
+                  Aceito os <a href="#termos" class="link_termos">termos e condições</a> e política de privacidade
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Botão de Cadastro -->
+            <div class="botao_container">
+              <button type="submit" class="btn_cadastro">
+                <span class="btn_texto">Cadastrar</span>
+                <span class="btn_icone">➤</span>
+              </button>
+            </div>
+
           </div>
-        </div>
+
       </form>
     </div>
   </section>
-</body>
+
+  <!-- SCRIPT PARA MOSTRAR/OCULTAR SENHA -->
+  <script>
+    function toggleSenha(inputId, botao) {
+      // Pega o input pelo ID
+      const input = document.getElementById(inputId);
+
+      // Verifica o tipo atual do input
+      if (input.type === "password") {
+        // Se está oculto, mostra a senha
+        input.type = "text";
+        botao.textContent = "🙈"; // Muda para macaco (senha visível)
+      } else {
+        // Se está visível, oculta a senha
+        input.type = "password";
+        botao.textContent = "👁️"; // Volta para olho (senha oculta)
+      }
+    }
+  </script>
+  </body>
 </html>

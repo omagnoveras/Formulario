@@ -230,6 +230,22 @@ header .container{
    - font-size: 14px; → Um pouco menor
    - opacity: 0.7; → 70% de transparência
 */
+/* ============================================
+   GENDER GROUP: Container do campo de gênero
+   ============================================ */
+.gender_group {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* EXPLICAÇÃO:
+   - Mesmo estilo do .data_group
+   - Cria um bloco separado para o gênero
+   - Fundo cinza claro para separar visualmente
+*/
+
 
 .radio_titulo{
     width: 100%;
@@ -975,3 +991,171 @@ header .container{
    - Ao clicar, o círculo cresce (efeito de onda)
    - background: rgba(255, 255, 255, 0.3); → Círculo branco transparente
 */
+
+/* ============================================
+   MEDIA QUERIES: Responsividade
+   ============================================ */
+
+/* TABLET (telas menores que 768px) */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  /* CONTAINER */
+  .container {
+    width: 95%;
+  }
+
+  .section_form .container {
+    padding: 25px 20px;
+  }
+
+  /* CAMPOS DE FORMULÁRIO: 1 coluna */
+  .form_campo {
+    flex: 1 1 100% !important;
+    min-width: 100%;
+  }
+
+  /* RADIO BUTTONS: 1 coluna */
+  .radio_opcao {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  /* ENDEREÇO: Todos os campos em 1 coluna */
+  .campo_pequeno {
+    flex: 1 1 100% !important;
+    min-width: 100%;
+  }
+
+  /* SENHA: Largura total */
+  .senha_wrapper {
+    max-width: 100%;
+  }
+
+  .campo_pequeno_senha {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* CHECKBOX: Texto menor */
+  .checkbox_wrapper label {
+    font-size: 13px;
+  }
+
+  /* BOTÃO: Largura total */
+  .btn_cadastro {
+    width: 100%;
+    min-width: auto;
+  }
+
+}
+
+/* MOBILE (telas menores que 480px) */
+@media (max-width: 480px) {
+
+  /* HEADER */
+  header {
+    padding: 15px 0;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  /* CONTAINER */
+  .section_form .container {
+    padding: 20px 15px;
+  }
+
+  /* GRUPOS */
+  .data_group,
+  .address_group,
+  .security_group,
+  .final_group {
+    padding: 15px;
+  }
+
+  /* TÍTULOS */
+  .data_group h3,
+  .address_group h3,
+  .security_group h3 {
+    font-size: 18px;
+  }
+
+  /* INPUTS */
+  .form_campo input,
+  .form_campo select {
+    font-size: 16px; /* Evita zoom no iOS */
+    padding: 10px 12px;
+  }
+
+  /* LABELS */
+  .form_campo label {
+    font-size: 13px;
+  }
+
+  /* RADIO BUTTONS */
+  .radio_opcao {
+    padding: 10px 12px;
+  }
+
+  .radio_opcao label {
+    font-size: 14px;
+  }
+
+  /* CRITÉRIOS */
+  .criterios {
+    padding: 12px;
+  }
+
+  .criterios_titulo {
+    font-size: 13px;
+  }
+
+  .criterios_lista li {
+    font-size: 12px;
+  }
+
+  /* CHECKBOX */
+  .checkbox_wrapper label {
+    font-size: 12px;
+  }
+
+  /* BOTÃO */
+  .btn_cadastro {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+}
+
+/* DESKTOP GRANDE (telas maiores que 1400px) */
+@media (min-width: 1400px) {
+
+  .container {
+    max-width: 1400px;
+  }
+
+  /* CAMPOS: 3 colunas em telas grandes */
+  .form_campo {
+    flex: 1 1 calc(33.33% - 14px);
+    min-width: 280px;
+  }
+
+  /* RADIO: 4 colunas */
+  .radio_opcao {
+    flex: 1 1 calc(25% - 12px);
+    min-width: 180px;
+  }
+
+}

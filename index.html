@@ -33,7 +33,6 @@
   <section class=" section_form centraliza">
     <div class="container">
       <form action="" method="POST">
-       
           <div class="data_group">
             <h3>Dados Pessoais:</h3>
             <!-- Campo Nome -->
@@ -59,40 +58,36 @@
               <label for="telefone">Telefone:</label>
               <input type="tel" id="telefone" name="telefone" required>
              </div>
-             
-            <!-- Campo de Gênero -->
-            <div class="form_campo">
-              <!-- Título do grupo de gênero -->
-               <div class="radio_titulo">
-                <label>Gênero</label>
-               </div>
+          </div>
+                    <!-- GÊNERO AGORA ESTÁ FORA (bloco separado) -->
+          <div class="gender_group">
+            <div class="radio_titulo">
+              <label>Gênero</label>
+            </div>
 
-               <!-- Container dos radio buttons -->
-              <div class="radio_group">
+            <div class="radio_group">
+              <!-- Opção 1: Masculino -->
+              <div class="radio_opcao">
+                <input type="radio" id="genderMasculino" name="gender" value="masculino" required>
+                <label for="genderMasculino">Masculino</label>
+              </div>
 
-                <!-- Opção 1: Masculino -->
-                 <div class="radio_opcao">
-                  <input type="radio" id="genderMasculino" name="gender" value="masculino" required>
-                  <label for="genderMasculino">Masculino</label>
-                </div>
-                
-                <!-- Opção 2: Feminino -->
-                <div class="radio_opcao">
-                  <input type="radio" id="genderFeminino" name="gender" value="feminino">
-                  <label for="genderFeminino">Feminino</label>
-                </div>
-                
-                <!-- Opção 3: Outros -->
-                <div class="radio_opcao">
-                  <input type="radio" id="genderOutros" name="gender" value="outros">
-                  <label for="genderOutros">Outros</label>
-                </div>
+              <!-- Opção 2: Feminino -->
+              <div class="radio_opcao">
+                <input type="radio" id="genderFeminino" name="gender" value="feminino">
+                <label for="genderFeminino">Feminino</label>
+              </div>
 
-                <!-- Opção 4: Prefiro não dizer-->
-                 <div class="radio_opcao">
-                  <input type="radio" id="genderNull" name="gender" value="nula">
-                  <label for="genderNull">Prefiro não dizer</label>
-                </div>
+              <!-- Opção 3: Outros -->
+              <div class="radio_opcao">
+                <input type="radio" id="genderOutros" name="gender" value="outros">
+                <label for="genderOutros">Outros</label>
+              </div>
+
+              <!-- Opção 4: Prefiro não dizer -->
+              <div class="radio_opcao">
+                <input type="radio" id="genderNull" name="gender" value="nula">
+                <label for="genderNull">Prefiro não dizer</label>
               </div>
             </div>
           </div>
